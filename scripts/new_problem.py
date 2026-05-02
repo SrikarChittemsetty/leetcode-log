@@ -36,8 +36,7 @@ def main() -> int:
     readme_template = (TEMPLATES_DIR / "problem-template.md").read_text()
     readme = (
         readme_template.replace("{{TITLE}}", title)
-        .replace("- Difficulty:", f"- Difficulty: {difficulty}")
-        .replace("- Date:", f"- Date: {date.today().isoformat()}")
+        .replace("{{DIFFICULTY}}", difficulty)
     )
     (destination / "README.md").write_text(readme)
     shutil.copyfile(TEMPLATES_DIR / "solution.py", destination / "solution.py")
@@ -49,4 +48,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

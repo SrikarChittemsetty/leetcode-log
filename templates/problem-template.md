@@ -2,36 +2,50 @@
 
 ## Metadata
 
-- Difficulty:
-- Link:
-- Date:
-- Time started:
-- Time solved:
-- Total time:
+- Difficulty: {{DIFFICULTY}}
+- Topic:
+- Time:
 - Result: Solved / Partial / Revisit
+- Link:
 
-## First Read
+## Problem Summary
 
 What is the problem asking?
+
+## Key Insight
+
+What is the main idea that unlocks the problem?
 
 ## Breakthroughs
 
 - 
 
-## Mistakes / Stuck Points
+## Pitfalls
 
 - 
 
-## Solution Notes
+## Final Solution
 
-Main idea:
+```python
+# Paste the final accepted solution here.
+```
 
-Complexity:
+## Complexity
 
 - Time:
 - Space:
 
-## Future Me
+## Mental Model
 
-What should I remember if I see this pattern again?
+What should future me remember?
+
+## Interview Trigger
+
+If you see:
+
+- 
+
+Immediately ask:
+
+> 
 
