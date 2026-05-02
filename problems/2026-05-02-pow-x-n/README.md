@@ -3,64 +3,54 @@
 ## Metadata
 
 - Difficulty: Medium
-- Topic: Math / Recursion / Divide and Conquer / Fast Exponentiation
-- Time:
-- Result:
+- Topic: Math / Recursion / Divide and Conquer
+- Time: ~12 minutes
+- Result: Solved
 - Link: https://leetcode.com/problems/powx-n/
 
 ## Problem Summary
 
-Compute `x^n` efficiently, where `x` is a float and `n` is an integer that can be negative.
-
-Naive repeated multiplication takes `O(n)` time, which is too slow for large exponents. The goal is to reduce the amount of work by reusing powers.
+Compute `x^n`, where `x` is a float and `n` is an integer that can be negative. Must avoid naive `O(n)` multiplication and handle large constraints efficiently.
 
 ## Key Insight
 
-Exponentiation can be broken down with divide and conquer.
+Exponentiation can be reduced using divide and conquer.
 
-For any exponent `n`:
-
-```text
-if n is even:
-    x^n = (x^(n / 2))^2
-
-if n is odd:
-    x^n = (x^(n // 2))^2 * x
-```
-
-This cuts the exponent roughly in half on every recursive call, which gives `O(log n)` time.
-
-## Handling Negative Exponents
-
-If `n < 0`, invert the base and make the exponent positive:
+Even exponent:
 
 ```text
-x^n = 1 / x^(-n)
+x^n = (x^(n / 2))^2
 ```
 
-So normalize first:
+Odd exponent:
 
-```python
-if n < 0:
-    x = 1 / x
-    n = -n
+```text
+x^n = (x^(n // 2))^2 * x
+```
+
+This reduces the problem size by half each step, giving logarithmic time complexity.
+
+Negative exponents are handled by inverting the base:
+
+```text
+x^(-n) = 1 / x^n
 ```
 
 ## Breakthroughs
 
-- Realized the speedup comes from shrinking the exponent exponentially, not from caching.
-- Saw that each recursive call follows one chain: `n -> n // 2 -> n // 4 -> ...`.
-- Understood why memoization is unnecessary: there are no overlapping subproblems.
-- Separated the negative exponent case from the main recursive logic.
-- Used the parity of `n` to decide whether the extra `* x` is needed.
+- Rejected naive `O(n)` repeated multiplication.
+- Recognized exponentiation can be split recursively.
+- Understood even vs odd decomposition of the exponent.
+- Identified the need to normalize negative exponents early.
+- Realized reuse comes from structure, not memoization.
+- Built a correct recursive divide-and-conquer solution.
 
 ## Pitfalls
 
-- Using naive multiplication creates an `O(n)` solution.
-- Forgetting to handle negative exponents causes incorrect results.
-- Recomputing `myPow(x, n // 2)` twice would destroy the benefit of divide and conquer.
-- Confusing `n / 2` with integer division. The recursive exponent should use `n // 2`.
-- Missing the `n == 0` base case.
+- Confusing binary or halving logic with bitwise operations, which are not required.
+- Overthinking memoization, which is unnecessary because there are no overlapping subproblems.
+- Misunderstanding odd exponent handling: must multiply by one extra `x`.
+- Thinking recursion branches overlap. They do not; this follows a single path.
 
 ## Final Solution
 
@@ -85,26 +75,21 @@ class Solution:
 ## Complexity
 
 - Time: `O(log n)`
-- Space: `O(log n)` due to the recursion stack.
+- Space: `O(log n)`
 
 ## Mental Model
 
-Repeatedly halve the exponent and reuse the computed half-power to build the final result efficiently.
-
-Fast exponentiation is divide and conquer:
-
-> Compute the half once, square it, and only multiply by the base when the exponent is odd.
+Think of exponentiation as repeatedly halving the exponent and reusing computed results instead of recomputing from scratch.
 
 ## Interview Trigger
 
 If you see:
 
-- exponentiation
-- very large `n`
-- repeated multiplication that seems too slow
-- recursive or divide-and-conquer framing
+- large exponentiation problem
+- need to compute powers efficiently
+- `x^n` with large constraints
 
 Immediately ask:
 
-> Can I halve the exponent and reuse the half-power?
+> Can I reduce exponent size using divide and conquer or binary decomposition instead of linear multiplication?
 
