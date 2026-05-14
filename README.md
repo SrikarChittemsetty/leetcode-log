@@ -12,6 +12,7 @@ recognize in interviews.
 | Problem | Difficulty | Pattern |
 | --- | --- | --- |
 | [Remove Duplicates from Sorted Array](problems/2026-05-14-remove-duplicates-from-sorted-array) | Easy | Two pointers / in-place array |
+| [Find the Index of the First Occurrence in a String](problems/2026-05-14-find-the-index-of-the-first-occurrence-in-a-string) | Easy | Fixed-size sliding window |
 | [Rotate Image](problems/2026-05-01-rotate-image) | Medium | Matrix transforms |
 | [Pow(x, n)](problems/2026-05-02-pow-x-n) | Medium | Divide and conquer |
 | [Reorder List](problems/2026-05-02-reorder-list) | Medium | Linked lists / two pointers |
