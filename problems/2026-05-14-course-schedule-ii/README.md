@@ -5,7 +5,7 @@
 - Difficulty: Medium
 - Topic: Graphs / DFS / Cycle Detection / Dependency Ordering
 - Time: ~40 minutes
-- Result: Solved by extending Course Schedule I logic to construct a valid ordering
+- Result: Solved by using DFS cycle detection with postorder insertion
 - Link: https://leetcode.com/problems/course-schedule-ii/
 
 ## Problem Summary
@@ -25,10 +25,7 @@ This means:
 to take course a, you must first complete course b
 ```
 
-Unlike Course Schedule I, we are no longer only checking whether completion is
-possible.
-
-Now we must:
+We must:
 
 - detect whether any logical inconsistencies exist
 - construct a valid ordering containing all courses
@@ -37,13 +34,8 @@ If no valid ordering exists, return an empty list.
 
 ## Key Insight
 
-This problem is essentially:
-
-```text
-Course Schedule I + recording the dependency resolution order
-```
-
-The prerequisite relationships form a directed dependency graph.
+The prerequisite relationships form a directed dependency graph, and the answer
+is a topological ordering of that graph.
 
 A cycle represents a logical impossibility:
 
@@ -228,7 +220,7 @@ Once a course is processed:
 
 ## Breakthroughs
 
-- Reused Course Schedule I cycle detection logic.
+- Recognized that the problem asks for topological ordering with cycle detection.
 - Realized the answer is built by appending after dependency DFS completes.
 - Separated temporary recursion state (`path`) from permanent result state (`order`).
 - Used `safe` both for memoization and to prevent duplicate output.

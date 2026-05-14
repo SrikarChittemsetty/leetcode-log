@@ -14,18 +14,13 @@ Topological sorting with indegrees is the other standard solution:
 This is also `O(V + E)` and can be easier to explain as "take all currently
 available courses first."
 
-## Relationship To Course Schedule I
+## DFS Colors
 
-Course Schedule I asks:
+The `path` / `safe` approach can also be written with color states:
 
-```text
-Is there a cycle?
-```
+- `0` = unvisited
+- `1` = currently visiting
+- `2` = fully processed
 
-Course Schedule II asks:
-
-```text
-If there is no cycle, what is one valid topological ordering?
-```
-
-The DFS version answers both by using cycle detection plus postorder insertion.
+When DFS reaches a `visiting` course, a cycle exists. When DFS finishes a course,
+mark it processed and append it to the ordering.
