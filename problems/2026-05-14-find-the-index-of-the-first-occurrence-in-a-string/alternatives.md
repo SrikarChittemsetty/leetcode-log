@@ -5,7 +5,9 @@
 Python's built-in string method solves the problem directly:
 
 ```python
-return haystack.find(needle)
+class Solution:
+    def strStr(self, haystack: str, needle: str) -> int:
+        return haystack.find(needle)
 ```
 
 This is concise and valid unless the interviewer asks for a manual

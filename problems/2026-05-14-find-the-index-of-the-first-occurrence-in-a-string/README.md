@@ -39,6 +39,21 @@ So the trivial built-in solution is:
 return haystack.find(needle)
 ```
 
+## Built-In Python Solution
+
+Python's `.find()` behavior:
+
+- returns the first matching index
+- returns `-1` automatically if not found
+
+So the shortest valid solution is:
+
+```python
+class Solution:
+    def strStr(self, haystack: str, needle: str) -> int:
+        return haystack.find(needle)
+```
+
 ## Interview Consideration
 
 Although `.find()` is acceptable unless forbidden, interviewers often want:
@@ -50,7 +65,7 @@ Although `.find()` is acceptable unless forbidden, interviewers often want:
 A good interview response is:
 
 ```text
-Python has a built-in .find(), but I will implement it manually.
+Python has a built-in .find(), but I will implement it manually to demonstrate the logic.
 ```
 
 ## Key Insight
