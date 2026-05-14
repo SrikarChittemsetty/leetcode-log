@@ -15,6 +15,7 @@ recognize in interviews.
 | [Pow(x, n)](problems/2026-05-02-pow-x-n) | Medium | Divide and conquer |
 | [Reorder List](problems/2026-05-02-reorder-list) | Medium | Linked lists / two pointers |
 | [Search a 2D Matrix](problems/2026-05-02-search-a-2d-matrix) | Medium | Binary search |
+| [Course Schedule](problems/2026-05-14-course-schedule) | Medium | Graph DFS / cycle detection |
 
 ## What This Shows
 
