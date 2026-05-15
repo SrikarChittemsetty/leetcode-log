@@ -19,6 +19,7 @@ recognize in interviews.
 | [Search a 2D Matrix](problems/2026-05-02-search-a-2d-matrix) | Medium | Binary search |
 | [Course Schedule](problems/2026-05-14-course-schedule) | Medium | Graph DFS / cycle detection |
 | [Course Schedule II](problems/2026-05-14-course-schedule-ii) | Medium | Graph DFS / topological ordering |
+| [Find the Duplicate Number](problems/2026-05-15-find-the-duplicate-number) | Medium | Floyd's cycle detection |
 
 ## What This Shows
 
