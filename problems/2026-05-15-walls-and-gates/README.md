@@ -22,6 +22,21 @@ If a gate cannot be reached, leave the room as `INF`.
 
 The grid must be modified in-place.
 
+## Retention Log
+
+Trigger:
+
+```text
+nearest distance in an unweighted grid
+```
+
+That should immediately map to:
+
+```text
+shortest path + unweighted grid -> BFS
+multiple starting points -> multi-source BFS
+```
+
 ## Core Insight
 
 We need the minimum distance to a gate in an unweighted grid.
@@ -87,6 +102,34 @@ INF
 
 cells.
 
+## Important Implementation Detail
+
+The problem's `INF` is not Python infinity.
+
+It is the integer sentinel:
+
+```python
+INF = 2147483647
+```
+
+or:
+
+```python
+INF = 2**31 - 1
+```
+
+Do not check against:
+
+```python
+float("inf")
+```
+
+because:
+
+```python
+2147483647 != float("inf")
+```
+
 ## Important BFS Understanding
 
 BFS is not a recursive function like DFS often is.
@@ -110,6 +153,22 @@ Directions:
 ```python
 directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 ```
+
+Each pair is a movement offset:
+
+```python
+nr, nc = r + dr, c + dc
+```
+
+Important distinction:
+
+```python
+(dr, dc)
+```
+
+are not actual neighbor coordinates.
+
+They are deltas added to the current cell.
 
 Typical grid BFS flow:
 
@@ -211,3 +270,9 @@ If there are multiple starting sources:
 ```text
 multi-source BFS
 ```
+
+## One-Line Memory Hook
+
+When I see nearest-source distance in an unweighted grid, I should think
+multi-source BFS, because BFS expands by distance layers and the first visit
+gives the shortest distance.
