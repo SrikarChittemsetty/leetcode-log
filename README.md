@@ -21,6 +21,7 @@ recognize in interviews.
 | [Course Schedule II](problems/2026-05-14-course-schedule-ii) | Medium | Graph DFS / topological ordering |
 | [Implement Trie (Prefix Tree)](problems/2026-05-15-implement-trie-prefix-tree) | Medium | Trie / prefix tree |
 | [Find the Duplicate Number](problems/2026-05-15-find-the-duplicate-number) | Medium | Floyd's cycle detection |
+| [Car Fleet](problems/2026-05-15-car-fleet) | Medium | Ordered sweep / monotonic state |
 
 ## What This Shows
 
