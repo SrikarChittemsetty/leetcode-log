@@ -19,6 +19,7 @@ recognize in interviews.
 | [Search a 2D Matrix](problems/2026-05-02-search-a-2d-matrix) | Medium | Binary search |
 | [Course Schedule](problems/2026-05-14-course-schedule) | Medium | Graph DFS / cycle detection |
 | [Course Schedule II](problems/2026-05-14-course-schedule-ii) | Medium | Graph DFS / topological ordering |
+| [Walls and Gates](problems/2026-05-15-walls-and-gates) | Medium | Multi-source grid BFS |
 | [Implement Trie (Prefix Tree)](problems/2026-05-15-implement-trie-prefix-tree) | Medium | Trie / prefix tree |
 | [Find the Duplicate Number](problems/2026-05-15-find-the-duplicate-number) | Medium | Floyd's cycle detection |
 | [Car Fleet](problems/2026-05-15-car-fleet) | Medium | Ordered sweep / monotonic state |
