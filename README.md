@@ -18,6 +18,7 @@ recognize in interviews.
 | [Find the Index of the First Occurrence in a String](problems/2026-05-14-find-the-index-of-the-first-occurrence-in-a-string) | Easy | Fixed-size sliding window |
 | [Group Anagrams](problems/2026-05-17-group-anagrams) | Medium | Frequency signature grouping |
 | [Top K Frequent Elements](problems/2026-05-17-top-k-frequent-elements) | Medium | Frequency map / heap |
+| [Product of Array Except Self](problems/2026-05-17-product-of-array-except-self) | Medium | Prefix/suffix products |
 | [Rotate Image](problems/2026-05-01-rotate-image) | Medium | Matrix transforms |
 | [Pow(x, n)](problems/2026-05-02-pow-x-n) | Medium | Divide and conquer |
 | [Reorder List](problems/2026-05-02-reorder-list) | Medium | Linked lists / two pointers |
