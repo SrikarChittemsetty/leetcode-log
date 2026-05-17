@@ -1,0 +1,281 @@
+# LeetCode 127: Word Ladder
+
+## Metadata
+
+- Difficulty: Hard
+- Topic: BFS / Shortest Path / Implicit Graph
+- Time:
+- Result: Solved by modeling words as graph nodes and mutations as edges
+- Link: https://leetcode.com/problems/word-ladder/
+
+## Problem Summary
+
+Given:
+
+- `beginWord`
+- `endWord`
+- `wordList`
+
+Return the length of the shortest transformation sequence from `beginWord` to
+`endWord`.
+
+Rules:
+
+- Change one letter at a time.
+- Every intermediate word must be in `wordList`.
+- `beginWord` does not need to be in `wordList`.
+- `endWord` must be reachable through valid transformations.
+
+## Retention Log
+
+Template:
+
+```text
+shortest path in an unweighted graph -> BFS
+```
+
+Why BFS?
+
+Each word transformation has equal cost:
+
+```text
+one letter change = one edge
+```
+
+BFS explores by layers:
+
+- 1 transformation away
+- 2 transformations away
+- 3 transformations away
+- and so on
+
+So the first time we reach `endWord`, we have found the shortest sequence.
+
+## Modeling Trick
+
+Turn the word problem into a graph problem.
+
+```text
+word = node
+one-letter transformation = edge
+```
+
+Example:
+
+```text
+hit -> hot
+```
+
+This is a valid edge because only one letter changes.
+
+So the problem becomes:
+
+```text
+Find shortest path from beginWord to endWord.
+```
+
+## Neighbor Generation
+
+We do not explicitly build the whole graph.
+
+Instead, when processing a word, generate neighbors on the fly:
+
+```python
+for i in range(len(word)):
+    for ch in "abcdefghijklmnopqrstuvwxyz":
+        newWord = word[:i] + ch + word[i + 1:]
+```
+
+This tries every possible one-letter mutation.
+
+Then we keep only mutations that are actually in the dictionary:
+
+```python
+if newWord in wordSet:
+```
+
+## Efficiency Insight
+
+Naively comparing one word against every word in `wordList` is expensive:
+
+```text
+O(N * L)
+```
+
+per word.
+
+Generating mutations costs:
+
+```text
+O(26 * L)
+```
+
+per word, with `O(1)` membership checks using a set.
+
+So we convert:
+
+```python
+wordSet = set(wordList)
+```
+
+## BFS State
+
+Queue stores:
+
+```python
+(word, sequence_length)
+```
+
+Example:
+
+```python
+("hit", 1)
+```
+
+because the sequence already contains one word:
+
+```text
+hit
+```
+
+When we move to a valid neighbor:
+
+```python
+queue.append((newWord, length + 1))
+```
+
+## Visited Rule
+
+Mark visited when enqueuing, not when popping.
+
+Why?
+
+If we wait until popping, the same word may be enqueued multiple times from
+different words in the same BFS layer.
+
+```python
+visited.add(newWord)
+queue.append((newWord, length + 1))
+```
+
+This guarantees each word enters the queue at most once.
+
+## Important Edge Case
+
+If `endWord` is not in `wordList`, return `0`.
+
+```python
+if endWord not in wordSet:
+    return 0
+```
+
+Because every transformed word after `beginWord` must be in the dictionary.
+
+## Invariant
+
+When a word is popped from the queue:
+
+```text
+length is the shortest sequence length needed to reach that word
+```
+
+Therefore:
+
+```python
+if word == endWord:
+    return length
+```
+
+is correct.
+
+## Breakthroughs
+
+- Recognized shortest transformation sequence as shortest path.
+- Modeled words as nodes and one-letter mutations as edges.
+- Avoided building the full graph by generating neighbors on demand.
+- Used a set for constant-time dictionary membership checks.
+- Marked visited on enqueue to prevent duplicate queue entries.
+
+## Pitfalls
+
+- Returning `0` too late when `endWord` is not in the dictionary.
+- Starting the sequence length at `0` instead of `1`.
+- Marking visited only when popping from the queue.
+- Comparing against every word in `wordList` for every popped word.
+- Forgetting that `beginWord` itself does not need to be in `wordList`.
+
+## Final Solution
+
+```python
+import collections
+from typing import List
+
+
+class Solution:
+    def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
+        wordSet = set(wordList)
+
+        if endWord not in wordSet:
+            return 0
+
+        queue = collections.deque([(beginWord, 1)])
+        visited = {beginWord}
+
+        alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+        while queue:
+            word, length = queue.popleft()
+
+            if word == endWord:
+                return length
+
+            for i in range(len(word)):
+                for ch in alphabet:
+                    newWord = word[:i] + ch + word[i + 1:]
+
+                    if newWord in wordSet and newWord not in visited:
+                        visited.add(newWord)
+                        queue.append((newWord, length + 1))
+
+        return 0
+```
+
+## Complexity
+
+Let:
+
+- `N` = number of words
+- `L` = word length
+
+Each visited word generates `26 * L` mutations. Creating each new string costs
+`O(L)`.
+
+- Time: `O(N * 26 * L^2)`, commonly simplified as `O(N * L^2)`
+- Space: `O(N)`
+
+## Mental Model
+
+This is BFS over an implicit graph.
+
+The graph edges are not stored directly. They are generated by mutating each
+character position and checking whether the result exists in `wordSet`.
+
+## Interview Trigger
+
+If you see:
+
+- shortest transformation sequence
+- all moves have equal cost
+- one-letter changes
+- dictionary-constrained transitions
+
+Think:
+
+```text
+BFS over words as nodes, one-letter mutations as edges
+```
+
+## One-Line Memory Hook
+
+When I see shortest transformation sequence, I should think BFS, and model each
+word as a node with one-letter mutations as edges.
