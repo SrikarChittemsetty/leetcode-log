@@ -24,6 +24,7 @@ recognize in interviews.
 | [Implement Trie (Prefix Tree)](problems/2026-05-15-implement-trie-prefix-tree) | Medium | Trie / prefix tree |
 | [Find the Duplicate Number](problems/2026-05-15-find-the-duplicate-number) | Medium | Floyd's cycle detection |
 | [Car Fleet](problems/2026-05-15-car-fleet) | Medium | Ordered sweep / monotonic state |
+| [Best Time to Buy and Sell Stock with Cooldown](problems/2026-05-17-best-time-to-buy-and-sell-stock-with-cooldown) | Medium | DP / memoized state search |
 
 ## What This Shows
 
