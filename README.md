@@ -21,6 +21,7 @@ recognize in interviews.
 | [Product of Array Except Self](problems/2026-05-17-product-of-array-except-self) | Medium | Prefix/suffix products |
 | [Rotate Image](problems/2026-05-01-rotate-image) | Medium | Matrix transforms |
 | [Valid Sudoku](problems/2026-05-17-valid-sudoku) | Medium | Constraint tracking with sets |
+| [Longest Consecutive Sequence](problems/2026-05-17-longest-consecutive-sequence) | Medium | Hash set / sequence starts |
 | [Pow(x, n)](problems/2026-05-02-pow-x-n) | Medium | Divide and conquer |
 | [Reorder List](problems/2026-05-02-reorder-list) | Medium | Linked lists / two pointers |
 | [Search a 2D Matrix](problems/2026-05-02-search-a-2d-matrix) | Medium | Binary search |
