@@ -29,6 +29,7 @@ recognize in interviews.
 | [Encode and Decode Strings](problems/2026-05-17-encode-and-decode-strings) | Medium | Length-prefix encoding |
 | [Pow(x, n)](problems/2026-05-02-pow-x-n) | Medium | Divide and conquer |
 | [Reorder List](problems/2026-05-02-reorder-list) | Medium | Linked lists / two pointers |
+| [Remove Nth Node From End of List](problems/2026-05-20-remove-nth-node-from-end-of-list) | Medium | Linked list fast/slow pointers |
 | [Search a 2D Matrix](problems/2026-05-02-search-a-2d-matrix) | Medium | Binary search |
 | [Course Schedule](problems/2026-05-14-course-schedule) | Medium | Graph DFS / cycle detection |
 | [Course Schedule II](problems/2026-05-14-course-schedule-ii) | Medium | Graph DFS / topological ordering |
