@@ -334,3 +334,24 @@ Think:
 ```text
 frequency map + heap of size k
 ```
+
+## Retention Card
+
+- Problem: 347. Top K Frequent Elements
+- Difficulty: Medium
+- Time Spent: ___
+- Pattern: frequency counter + bucket/heap
+- Trigger: need most frequent elements
+- Core Insight: first count frequencies, then retrieve largest counts
+- Template: count values, bucket by frequency, collect from highest bucket
+- Complexities: `O(n)` time with bucket, `O(n)` space
+
+Process:
+
+- First step is ordinary frequency counting.
+- Sorting counts works but costs `O(n log n)`.
+- Bucket sort uses frequency range `0..n`.
+
+Mistakes:
+
+- Do not confuse this with stream top-k; static input can be bucketed.
