@@ -19,6 +19,7 @@ recognize in interviews.
 | [Find the Index of the First Occurrence in a String](problems/2026-05-14-find-the-index-of-the-first-occurrence-in-a-string) | Easy | Fixed-size sliding window |
 | [Group Anagrams](problems/2026-05-17-group-anagrams) | Medium | Frequency signature grouping |
 | [Two Sum II - Input Array Is Sorted](problems/2026-05-19-two-sum-ii-input-array-is-sorted) | Medium | Opposite-end two pointers |
+| [Container With Most Water](problems/2026-05-20-container-with-most-water) | Medium | Opposite-end two pointers |
 | [Top K Frequent Elements](problems/2026-05-17-top-k-frequent-elements) | Medium | Frequency map / heap |
 | [Product of Array Except Self](problems/2026-05-17-product-of-array-except-self) | Medium | Prefix/suffix products |
 | [Rotate Image](problems/2026-05-01-rotate-image) | Medium | Matrix transforms |
