@@ -14,6 +14,7 @@ recognize in interviews.
 | [Two Sum](problems/2026-05-17-two-sum) | Easy | Hash map lookup |
 | [Contains Duplicate](problems/2026-05-17-contains-duplicate) | Easy | Hash set membership |
 | [Valid Anagram](problems/2026-05-17-valid-anagram) | Easy | Frequency counting |
+| [Valid Palindrome](problems/2026-05-19-valid-palindrome) | Easy | Opposite-end two pointers |
 | [Remove Duplicates from Sorted Array](problems/2026-05-14-remove-duplicates-from-sorted-array) | Easy | Two pointers / in-place array |
 | [Find the Index of the First Occurrence in a String](problems/2026-05-14-find-the-index-of-the-first-occurrence-in-a-string) | Easy | Fixed-size sliding window |
 | [Group Anagrams](problems/2026-05-17-group-anagrams) | Medium | Frequency signature grouping |
