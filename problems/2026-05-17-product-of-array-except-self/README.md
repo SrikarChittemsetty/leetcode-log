@@ -297,3 +297,25 @@ Think:
 ```text
 prefix contribution * suffix contribution
 ```
+
+## Retention Card
+
+- Problem: 238. Product of Array Except Self
+- Difficulty: Medium
+- Time Spent: ___
+- Pattern: prefix/suffix accumulation
+- Trigger: need product excluding current index without division
+- Core Insight: `answer[i] = product before i * product after i`
+- Template: first pass stores prefix, second pass multiplies suffix
+- Complexities: `O(n)` time, `O(1)` extra space excluding output
+
+Process:
+
+- Brute force recomputes product for each index.
+- Need reuse of products from left and right.
+- Prefix pass handles left side, suffix pass handles right side.
+
+Mistakes:
+
+- Initialize prefix and suffix as `1`.
+- Update result before multiplying current `nums[i]`.
