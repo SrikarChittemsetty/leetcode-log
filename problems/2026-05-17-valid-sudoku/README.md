@@ -293,3 +293,25 @@ Think:
 ```text
 sets for each constraint group
 ```
+
+## Retention Card
+
+- Problem: 36. Valid Sudoku
+- Difficulty: Medium
+- Time Spent: ___
+- Pattern: constraint tracking with sets
+- Trigger: need validate uniqueness across multiple regions
+- Core Insight: each number must be unique in its row, column, and `3 x 3` box
+- Template: rows, cols, boxes sets
+- Complexities: `O(1)` time and space technically because board is fixed `9 x 9`
+
+Process:
+
+- Every filled cell creates three constraints.
+- If value already exists in any relevant set, invalid.
+- Box key is `(r // 3, c // 3)`.
+
+Mistakes:
+
+- Skip `"."`.
+- Box indexing is the main detail.
