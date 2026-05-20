@@ -296,3 +296,25 @@ Think:
 ```text
 hash set + only expand from sequence starts
 ```
+
+## Retention Card
+
+- Problem: 128. Longest Consecutive Sequence
+- Difficulty: Medium
+- Time Spent: ___
+- Pattern: set + sequence starts
+- Trigger: need longest consecutive run without sorting
+- Core Insight: only begin counting at numbers where `x - 1` does not exist
+- Template: put nums in set, expand only from starts
+- Complexities: `O(n)` time, `O(n)` space
+
+Process:
+
+- Sorting would work but costs `O(n log n)`.
+- Set gives `O(1)` existence checks.
+- Avoid duplicate work by only starting at true sequence beginnings.
+
+Mistakes:
+
+- Do not expand from every number.
+- Check `x - 1 not in set` before counting.
