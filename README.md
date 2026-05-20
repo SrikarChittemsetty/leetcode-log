@@ -17,6 +17,7 @@ recognize in interviews.
 | [Valid Palindrome](problems/2026-05-19-valid-palindrome) | Easy | Opposite-end two pointers |
 | [Remove Duplicates from Sorted Array](problems/2026-05-14-remove-duplicates-from-sorted-array) | Easy | Two pointers / in-place array |
 | [Find the Index of the First Occurrence in a String](problems/2026-05-14-find-the-index-of-the-first-occurrence-in-a-string) | Easy | Fixed-size sliding window |
+| [Linked List Cycle](problems/2026-05-20-linked-list-cycle) | Easy | Fast/slow pointers |
 | [Group Anagrams](problems/2026-05-17-group-anagrams) | Medium | Frequency signature grouping |
 | [Two Sum II - Input Array Is Sorted](problems/2026-05-19-two-sum-ii-input-array-is-sorted) | Medium | Opposite-end two pointers |
 | [Container With Most Water](problems/2026-05-20-container-with-most-water) | Medium | Opposite-end two pointers |
