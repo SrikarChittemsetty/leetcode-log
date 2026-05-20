@@ -8,6 +8,24 @@
 - Result: Solved
 - Link: https://leetcode.com/problems/two-sum/
 
+## Retention Card
+
+- Pattern: hashmap lookup
+- Trigger: need complement quickly
+- Core Insight: for each `x`, check if `target - x` was already seen
+- Template: `value -> index` map
+- Complexity: `O(n)` time, `O(n)` space
+
+Process:
+
+- brute force checks every pair
+- bottleneck is searching for complement
+- hashmap makes complement lookup `O(1)`
+
+Mistake to watch:
+
+- check complement before inserting current value
+
 ## Problem Summary
 
 Given an array `nums` and an integer `target`, return the indices of two numbers
