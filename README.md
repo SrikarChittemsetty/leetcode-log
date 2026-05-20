@@ -34,6 +34,7 @@ recognize in interviews.
 | [Course Schedule II](problems/2026-05-14-course-schedule-ii) | Medium | Graph DFS / topological ordering |
 | [Walls and Gates](problems/2026-05-15-walls-and-gates) | Medium | Multi-source grid BFS |
 | [Word Ladder](problems/2026-05-16-word-ladder) | Hard | BFS / implicit graph |
+| [Trapping Rain Water](problems/2026-05-20-trapping-rain-water) | Hard | Two pointers / running maximums |
 | [Implement Trie (Prefix Tree)](problems/2026-05-15-implement-trie-prefix-tree) | Medium | Trie / prefix tree |
 | [Find the Duplicate Number](problems/2026-05-15-find-the-duplicate-number) | Medium | Floyd's cycle detection |
 | [Car Fleet](problems/2026-05-15-car-fleet) | Medium | Ordered sweep / monotonic state |
