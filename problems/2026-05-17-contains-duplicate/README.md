@@ -8,6 +8,24 @@
 - Result: Solved
 - Link: https://leetcode.com/problems/contains-duplicate/
 
+## Retention Card
+
+- Pattern: seen set
+- Trigger: need to know if a value appeared before
+- Core Insight: a set gives `O(1)` average membership checks
+- Template: iterate `nums`; if `x in seen`, return `True`; otherwise add `x`
+- Complexity: `O(n)` time, `O(n)` space
+
+Process:
+
+- brute force would compare every pair
+- bottleneck is repeated searching
+- set removes repeated search
+
+Mistake to watch:
+
+- check before adding; adding first can hide the "previously seen" invariant
+
 ## Problem Summary
 
 Given an integer array `nums`, return `True` if any value appears at least twice.
