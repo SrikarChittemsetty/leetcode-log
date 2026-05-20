@@ -20,6 +20,7 @@ recognize in interviews.
 | [Group Anagrams](problems/2026-05-17-group-anagrams) | Medium | Frequency signature grouping |
 | [Two Sum II - Input Array Is Sorted](problems/2026-05-19-two-sum-ii-input-array-is-sorted) | Medium | Opposite-end two pointers |
 | [Container With Most Water](problems/2026-05-20-container-with-most-water) | Medium | Opposite-end two pointers |
+| [3Sum](problems/2026-05-20-3sum) | Medium | Sorting / two pointers |
 | [Top K Frequent Elements](problems/2026-05-17-top-k-frequent-elements) | Medium | Frequency map / heap |
 | [Product of Array Except Self](problems/2026-05-17-product-of-array-except-self) | Medium | Prefix/suffix products |
 | [Rotate Image](problems/2026-05-01-rotate-image) | Medium | Matrix transforms |
