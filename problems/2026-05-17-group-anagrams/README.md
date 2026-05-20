@@ -177,3 +177,24 @@ Think:
 ```text
 canonical frequency signature -> dictionary grouping
 ```
+
+## Retention Card
+
+- Problem: 49. Group Anagrams
+- Difficulty: Medium
+- Time Spent: ___
+- Pattern: hashmap of lists
+- Trigger: group items by shared signature
+- Core Insight: anagrams share the same sorted string or character-count signature
+- Template: `key -> list of words`
+- Complexities: `O(n * k log k)` with sorted key, `O(n * k)` with count key
+
+Process:
+
+- Need a canonical representation of each word.
+- Sorted word works as a signature.
+- Append each word into its signature group.
+
+Mistakes:
+
+- Return `groups.values()`, not the dictionary itself.
