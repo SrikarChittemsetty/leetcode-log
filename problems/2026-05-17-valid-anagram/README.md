@@ -9,6 +9,24 @@
 - Result: Solved
 - Link: https://leetcode.com/problems/valid-anagram/
 
+## Retention Card
+
+- Pattern: frequency counter
+- Trigger: compare whether two strings have identical character counts
+- Core Insight: anagrams have the same frequency distribution
+- Template: count chars in `s`, subtract chars in `t`, check all zero
+- Complexity: `O(n)` time, `O(1)` space for fixed alphabet / `O(k)` general
+
+Process:
+
+- sorting works but costs `O(n log n)`
+- counting preserves exact character distribution faster
+- compare counts instead of order
+
+Mistake to watch:
+
+- length mismatch can return `False` immediately
+
 ## Problem Summary
 
 Given two strings `s` and `t`, determine whether `t` is an anagram of `s`.
