@@ -181,3 +181,25 @@ Think:
 ```text
 length-prefix encoding
 ```
+
+## Retention Card
+
+- Problem: 271. Encode and Decode Strings
+- Difficulty: Medium
+- Time Spent: ___
+- Pattern: length-prefix encoding
+- Trigger: need combine strings without ambiguity
+- Core Insight: delimiters alone are unsafe because strings can contain any character
+- Template: encode as `len + "#" + string`
+- Complexities: `O(total characters)` time, `O(total characters)` space
+
+Process:
+
+- Simple join fails if delimiter appears inside strings.
+- Length tells decoder exactly how many characters to read.
+- Decode by reading digits until `"#"`, then taking length chars.
+
+Mistakes:
+
+- After reading length, move past `"#"`.
+- Empty string works as `0#`.
