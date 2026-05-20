@@ -25,6 +25,7 @@ recognize in interviews.
 | [3Sum](problems/2026-05-20-3sum) | Medium | Sorting / two pointers |
 | [Top K Frequent Elements](problems/2026-05-17-top-k-frequent-elements) | Medium | Frequency map / heap |
 | [Product of Array Except Self](problems/2026-05-17-product-of-array-except-self) | Medium | Prefix/suffix products |
+| [Longest Substring Without Repeating Characters](problems/2026-05-20-longest-substring-without-repeating-characters) | Medium | Variable sliding window |
 | [Rotate Image](problems/2026-05-01-rotate-image) | Medium | Matrix transforms |
 | [Valid Sudoku](problems/2026-05-17-valid-sudoku) | Medium | Constraint tracking with sets |
 | [Longest Consecutive Sequence](problems/2026-05-17-longest-consecutive-sequence) | Medium | Hash set / sequence starts |
