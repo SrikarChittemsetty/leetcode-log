@@ -8,13 +8,13 @@ class Solution:
         result = []
 
         for right, num in enumerate(nums):
-            while dq and dq[0] <= right - k:
-                dq.popleft()
-
             while dq and nums[dq[-1]] < num:
                 dq.pop()
 
             dq.append(right)
+
+            if dq[0] <= right - k:
+                dq.popleft()
 
             if right >= k - 1:
                 result.append(nums[dq[0]])
