@@ -19,6 +19,7 @@ recognize in interviews.
 | [Find the Index of the First Occurrence in a String](problems/2026-05-14-find-the-index-of-the-first-occurrence-in-a-string) | Easy | Fixed-size sliding window |
 | [Linked List Cycle](problems/2026-05-20-linked-list-cycle) | Easy | Fast/slow pointers |
 | [Best Time to Buy and Sell Stock](problems/2026-05-20-best-time-to-buy-and-sell-stock) | Easy | Running minimum / max profit |
+| [Binary Search](problems/2026-05-24-binary-search) | Easy | Binary search |
 | [Group Anagrams](problems/2026-05-17-group-anagrams) | Medium | Frequency signature grouping |
 | [Two Sum II - Input Array Is Sorted](problems/2026-05-19-two-sum-ii-input-array-is-sorted) | Medium | Opposite-end two pointers |
 | [Container With Most Water](problems/2026-05-20-container-with-most-water) | Medium | Opposite-end two pointers |
@@ -26,6 +27,8 @@ recognize in interviews.
 | [Top K Frequent Elements](problems/2026-05-17-top-k-frequent-elements) | Medium | Frequency map / heap |
 | [Product of Array Except Self](problems/2026-05-17-product-of-array-except-self) | Medium | Prefix/suffix products |
 | [Longest Substring Without Repeating Characters](problems/2026-05-20-longest-substring-without-repeating-characters) | Medium | Variable sliding window |
+| [Permutation in String](problems/2026-05-20-permutation-in-string) | Medium | Fixed-size sliding window |
+| [Longest Repeating Character Replacement](problems/2026-05-24-longest-repeating-character-replacement) | Medium | Variable sliding window |
 | [Rotate Image](problems/2026-05-01-rotate-image) | Medium | Matrix transforms |
 | [Valid Sudoku](problems/2026-05-17-valid-sudoku) | Medium | Constraint tracking with sets |
 | [Longest Consecutive Sequence](problems/2026-05-17-longest-consecutive-sequence) | Medium | Hash set / sequence starts |
@@ -39,6 +42,8 @@ recognize in interviews.
 | [Walls and Gates](problems/2026-05-15-walls-and-gates) | Medium | Multi-source grid BFS |
 | [Word Ladder](problems/2026-05-16-word-ladder) | Hard | BFS / implicit graph |
 | [Trapping Rain Water](problems/2026-05-20-trapping-rain-water) | Hard | Two pointers / running maximums |
+| [Minimum Window Substring](problems/2026-05-24-minimum-window-substring) | Hard | Variable sliding window |
+| [Sliding Window Maximum](problems/2026-05-24-sliding-window-maximum) | Hard | Monotonic deque |
 | [Implement Trie (Prefix Tree)](problems/2026-05-15-implement-trie-prefix-tree) | Medium | Trie / prefix tree |
 | [Find the Duplicate Number](problems/2026-05-15-find-the-duplicate-number) | Medium | Floyd's cycle detection |
 | [Car Fleet](problems/2026-05-15-car-fleet) | Medium | Ordered sweep / monotonic state |
