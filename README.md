@@ -19,6 +19,7 @@ recognize in interviews.
 | [Find the Index of the First Occurrence in a String](problems/2026-05-14-find-the-index-of-the-first-occurrence-in-a-string) | Easy | Fixed-size sliding window |
 | [Linked List Cycle](problems/2026-05-20-linked-list-cycle) | Easy | Fast/slow pointers |
 | [Reverse Linked List](problems/2026-05-28-reverse-linked-list) | Easy | Linked list pointer reversal |
+| [Merge Two Sorted Lists](problems/2026-05-28-merge-two-sorted-lists) | Easy | Dummy node / tail pointer |
 | [Best Time to Buy and Sell Stock](problems/2026-05-20-best-time-to-buy-and-sell-stock) | Easy | Running minimum / max profit |
 | [Binary Search](problems/2026-05-24-binary-search) | Easy | Binary search |
 | [Group Anagrams](problems/2026-05-17-group-anagrams) | Medium | Frequency signature grouping |
